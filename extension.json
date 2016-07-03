@@ -1,0 +1,43 @@
+{
+    "name": "PermanentRecord",
+    "version": "0.0.1",
+    "author": [
+        "[http://www.ockapus.com Christopher Mangum]"
+    ],
+    "url": "http://ockapus.com/arcana/Extension:PermanentRecord",
+    "descriptionmsg": "permanentrecord-desc",
+    "license-name": "CC-BY-3.0",
+    "type": "specialpage",
+    "AutoloadClasses": {
+        "PermanentRecordHooks": "PermanentRecord.hooks.php",
+        "SpecialPermanentRecord": "includes/specials/SpecialPermanentRecord.php"
+    },
+    "ExtensionMessagesFiles": {
+        "PermanentRecordAlias": "PermanentRecord.i18n.alias.php"
+    },
+    "Hooks": {
+        "LoadExtensionSchemaUpdates": [
+            "PermanentRecordHooks::onLoadExtensionSchemaUpdates"
+        ]
+    },
+    "MessagesDirs": {
+        "PermanentRecord": [
+            "i18n"
+        ]
+    },
+    "SpecialPages": {
+        "PermanentRecord": "SpecialPermanentRecord"
+    },
+    "GroupPermissions": {
+        "muxstaff": {
+            "viewrecords": true
+        },
+        "fatestaff": {
+            "viewrecords": true
+        }
+    },
+    "AvailableRights": [
+        "viewrecords"
+    ],
+    "manifest_version": 1
+}
